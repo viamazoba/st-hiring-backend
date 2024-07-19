@@ -1,0 +1,34 @@
+# Set the default behavior
+# Normalize text to O/S local by default
+* text=auto
+
+# Project convention is to use LF EOLs for all node source code and configs
+Dockerfile text eol=lf
+yarn.lock text eol=lf
+*.cjs text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.map text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+*.svg text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.txt text eol=lf
+*.xml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Always normalize UNIX dotfiles and scripts to LF on checkin
+# Always normalize UNIX dotfiles and scripts to LF on checkout
+.* text eol=lf
+*.sh text eol=lf
+
+# Never normalize binaries
+*.png binary
+*.jpg binary

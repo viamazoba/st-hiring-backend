@@ -1,0 +1,36 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["dist/**/*"],
+
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "types": ["jest", "node"],
+    "noUnusedParameters": false,
+    // Emit options
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+
+    // Type Checking Options
+    "noUnusedLocals": true,
+    //"noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Modules options
+    "resolveJsonModule": true,
+
+    // Language and Environment options
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    // Completeness options
+    "skipDefaultLibCheck": true,
+
+    "plugins": [{ "transform": "ts-auto-mock/transformer", "cacheBetweenTests": false }]
+  }
+}
