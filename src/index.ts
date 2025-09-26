@@ -1,9 +1,13 @@
 import express from 'express';
 import { knex } from 'knex';
-import dbConfig  from './knexfile';
+import dbConfig from './knexfile';
 import { createEventDAL } from './dal/events.dal';
 import { createTicketDAL } from './dal/tickets.dal';
 import { createGetEventsController } from './controllers/get-events';
+import { connectMongo } from './infrastructure/database/mongo.connection';
+
+// Conection to MongoDB
+connectMongo();
 
 // initialize Knex
 const Knex = knex(dbConfig.development);
