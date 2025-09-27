@@ -1,5 +1,6 @@
 import express from 'express';
 import { knex } from 'knex';
+import colors from 'colors'
 import dbConfig from './knexfile';
 import { createEventDAL } from './dal/events.dal';
 import { createTicketDAL } from './dal/tickets.dal';
@@ -25,7 +26,7 @@ app.use('/health', (req, res) => {
 });
 
 app.use('/events', createGetEventsController({ eventsDAL: eventDAL, ticketsDAL: TicketDAL }));
-app.use('/settings', settingsRouter);
+app.use('/api/v1/settings', settingsRouter);
 
 app.use('/', (_req, res) => {
   res.json({ message: 'Hello API' });
@@ -33,5 +34,5 @@ app.use('/', (_req, res) => {
 
 
 app.listen(3000, () => {
-  console.log('Server Started')
+  console.log(colors.bgYellow.bold('Server Started in port 3000'))
 });
