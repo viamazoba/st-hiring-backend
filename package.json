@@ -10,7 +10,7 @@
     },
     "scripts": {
         "start": "yarn nodemon src/index.ts",
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest --watchAll",
         "migrations:make": "yarn knex migrate:make --migrations-directory src/database/migrations ",
         "migrations:latest": "yarn knex migrate:latest --knexfile ./src/knexfile.ts --migrations-directory ./database/migrations",
         "migrations:down": "yarn knex migrate:down --knexfile ./src/knexfile.ts --migrations-directory ./database/migrations",
