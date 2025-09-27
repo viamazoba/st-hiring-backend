@@ -57,7 +57,7 @@ Create the necessary tables and populate the events and tickets data:
   yarn db:seed
   ```
 
-2. MongoDB (NoSQL) Seed (optional)
+2. MongoDB (NoSQL) Seed (**optional**)
    To test the GET endpoint for settings, you may want to pre-populate a client document.
 
 - **Run MongoDB Seed**: Insert the default settings document for a specific client ID:
@@ -90,10 +90,10 @@ The API follows a versioned path structure (`/api/v1/`).
 
 ## Example Usage (Settings Endpoint)
 
-| Command                                       | Action                         | Expected Result                                                  |
-| --------------------------------------------- | ------------------------------ | ---------------------------------------------------------------- |
-| `GET http://localhost:3000/api/v1/settings/1` | Fetch settings for client 100. | Returns the default settings object (and creates it in MongoDB). |
-| `PUT http://localhost:3000/api/v1/settings/1` | Update client 100 settings.    | Returns the updated settings object.                             |
+| Command                                       | Action                       | Expected Result                                                  |
+| --------------------------------------------- | ---------------------------- | ---------------------------------------------------------------- |
+| `GET http://localhost:3000/api/v1/settings/1` | Fetch settings for client 1. | Returns the default settings object (and creates it in MongoDB). |
+| `PUT http://localhost:3000/api/v1/settings/1` | Update client 1 settings.    | Returns the updated settings object.                             |
 
 ## ✅ Testing
 
