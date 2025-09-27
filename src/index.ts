@@ -5,6 +5,7 @@ import { createEventDAL } from './dal/events.dal';
 import { createTicketDAL } from './dal/tickets.dal';
 import { createGetEventsController } from './controllers/get-events';
 import { connectMongo } from './infrastructure/database/mongo.connection';
+import settingsRouter from './routes/settings.route';
 
 // Conection to MongoDB
 connectMongo();
@@ -24,10 +25,12 @@ app.use('/health', (req, res) => {
 });
 
 app.use('/events', createGetEventsController({ eventsDAL: eventDAL, ticketsDAL: TicketDAL }));
+app.use('/settings', settingsRouter);
 
 app.use('/', (_req, res) => {
   res.json({ message: 'Hello API' });
 });
+
 
 app.listen(3000, () => {
   console.log('Server Started')
