@@ -904,6 +904,7 @@ __metadata:
     colors: ^1.4.0
     eslint: ^9.6.0
     express: 4.19.2
+    express-validator: ^7.2.1
     jest: ^29.7.0
     jest-pnp-resolver: ^1.2.3
     knex: ^3.1.0
@@ -2309,6 +2310,16 @@ __metadata:
   version: 3.1.1
   resolution: "exponential-backoff@npm:3.1.1"
   checksum: 3d21519a4f8207c99f7457287291316306255a328770d320b401114ec8481986e4e467e854cb9914dd965e0a1ca810a23ccb559c642c88f4c7f55c55778a9b48
+  languageName: node
+  linkType: hard
+
+"express-validator@npm:^7.2.1":
+  version: 7.2.1
+  resolution: "express-validator@npm:7.2.1"
+  dependencies:
+    lodash: ^4.17.21
+    validator: ~13.12.0
+  checksum: 4d0a55d3cd8c8f5d6bd2245afa137d826a732f77a769eaffa9ec2f84e5508fbdbae0af6c6d1767b0538e6fd9a5ee0dfe76550b4b9ae1918b37eb3c84e867bb2d
   languageName: node
   linkType: hard
 
@@ -5430,6 +5441,13 @@ __metadata:
     "@types/istanbul-lib-coverage": ^2.0.1
     convert-source-map: ^2.0.0
   checksum: ded42cd535d92b7fd09a71c4c67fb067487ef5551cc227bfbf2a1f159a842e4e4acddaef20b955789b8d3b455b9779d036853f4a27ce15007f6364a4d30317ae
+  languageName: node
+  linkType: hard
+
+"validator@npm:~13.12.0":
+  version: 13.12.0
+  resolution: "validator@npm:13.12.0"
+  checksum: fb8f070724770b1449ea1a968605823fdb112dbd10507b2802f8841cda3e7b5c376c40f18c84e6a7b59de320a06177e471554101a85f1fa8a70bac1a84e48adf
   languageName: node
   linkType: hard
 
