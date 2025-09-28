@@ -2,6 +2,10 @@
 
 Welcome to the SeeTickets backend test for Mid-Level hires. The purpose of this test is to evaluate the successful integration of new functionality, adherence to Clean Architecture principles, and the inclusion of Unit Tests within an existing codebase.
 
+> ⚠️ **Important Note:**  
+> In this project, some environment variables have been hardcoded **solely for technical test purposes**.  
+> For professional development, it is recommended to manage configuration using `.env` files and a secure environment variable manager.
+
 ## 🚀 Tech Stack
 
 This project utilizes a modern Node.js ecosystem setup and a polyglot persistence model:
@@ -29,7 +33,7 @@ To run and test this project locally, you must have the following installed:
 
 Follow these steps to prepare your environment and install dependencies:
 
-1. **Seleccionar Versión de Node**: Ensure you are using the required Node.js version::
+1. **Use right Version of Node**: Ensure you are using the required Node.js version::
    ```bash
    nvm use
    ```
