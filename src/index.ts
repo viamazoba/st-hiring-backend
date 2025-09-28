@@ -1,12 +1,14 @@
 import express from 'express';
 import { knex } from 'knex';
 import colors from 'colors'
+import cors from 'cors'
 import dbConfig from './knexfile';
 import { createEventDAL } from './dal/events.dal';
 import { createTicketDAL } from './dal/tickets.dal';
 import { createGetEventsController } from './controllers/get-events';
 import { connectMongo } from './infrastructure/database/mongo.connection';
 import settingsRouter from './routes/settings.route';
+import { corsConfig } from './config/cors.config';
 
 // Conection to MongoDB
 connectMongo();
@@ -20,6 +22,7 @@ const TicketDAL = createTicketDAL(Knex);
 
 
 const app = express();
+app.use(cors(corsConfig))
 
 app.use('/health', (req, res) => {
   res.json({ status: 'ok' });
