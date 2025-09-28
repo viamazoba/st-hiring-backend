@@ -20,7 +20,9 @@ export const updateSettingsValidation: ValidationChain[] = [
     isBoolean('fulfillmentFormat.rfid'),
     isBoolean('fulfillmentFormat.print'),
 
-    body('printer.id').optional().isString().withMessage('printer.id must be a string or null'),
+    body('printer.id').optional({ nullable: true })
+        .custom((value) => value === null || typeof value === 'string')
+        .withMessage('printer.id must be a string or null'),
 
     isBoolean('printingFormat.formatA'),
     isBoolean('printingFormat.formatB'),
